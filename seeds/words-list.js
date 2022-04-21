@@ -17,4 +17,3 @@ exports.seed = async function (knex) {
   }
   console.log('Completed')
 }
-// new comment
