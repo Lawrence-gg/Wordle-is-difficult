@@ -7,10 +7,10 @@ const Game = () => {
   <div className="game">
     <Container>
       <Grid container>
-        <Grid item md={1}>
+        <Grid item md={12}>
           <Paper>Save</Paper>
         </Grid>
-        <Grid item md={1}>
+        <Grid item md={12}>
           <Paper>Elate</Paper>
         </Grid>
         <Grid item>
