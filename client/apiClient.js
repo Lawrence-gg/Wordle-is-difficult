@@ -1,5 +1,5 @@
 import request from 'superagent'
 
-export function getGreeting() {
-  return request.get('/greeting').then((res) => res.body.greeting)
+export function getWords() {
+  return request.get('/words').then((res) => res.body)
 }

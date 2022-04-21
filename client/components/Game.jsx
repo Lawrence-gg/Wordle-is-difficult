@@ -1,23 +1,12 @@
 import React from 'react'
-import { Grid,Paper, Container} from '@material-ui/core'
-
+import WordsList from './WordsList'
+import GuessForm from './GuessForm'
 
 const Game = () => {
   return (
   <div className="game">
-    <Container>
-      <Grid container>
-        <Grid item md={12}>
-          <Paper>Save</Paper>
-        </Grid>
-        <Grid item md={12}>
-          <Paper>Elate</Paper>
-        </Grid>
-        <Grid item>
-          <Paper>C</Paper>
-        </Grid>
-      </Grid>
-    </Container>
+  <GuessForm />
+  <WordsList />
   </div>
   )
 }
