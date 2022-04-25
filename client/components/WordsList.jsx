@@ -1,5 +1,5 @@
 import React, { useState,useEffect } from 'react'
-import { Grid, Paper, Container } from '@material-ui/core'
+import { Grid, Paper, Container, MuiThemeProvider } from '@material-ui/core'
 import { getTestWords } from '../api/wordApi'
 
 const WordsList = () => {
@@ -17,14 +17,11 @@ const WordsList = () => {
 
   return (
     <div>
-    <button onClick={handleClick}>Populate</button>
-    {/* {dictionary.map((word, idx) => <div key={idx}><p>{word.word}</p></div>)} */}
-  
       <Container>
       <Grid container>
       {dictionary.map((word, i) => {
-        return ( <Grid item md={1} key ={i}>
-            <Paper>{word.word}</Paper>
+        return ( <Grid item md={1} key ={i} sx={{margin: 2}}>
+            <Paper className="paper" elevation={6}>{word.word}</Paper>
           </Grid>)
       })}
           <Grid item md={1}>
