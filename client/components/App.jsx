@@ -2,14 +2,12 @@ import React from 'react'
 import Game from './Game'
 import Header from './Header'
 
-
 const App = () => {
   return (
-   <div>
-   <Header />
-   <Game />
-   
-   </div>
+    <div>
+      <Header />
+      <Game />
+    </div>
   )
 }
 

@@ -1,13 +1,12 @@
 const path = require('path')
 const express = require('express')
-const cors = require('cors')
 
 const server = express()
+const words = require('./Routes/wordRoutes')
 
 server.use(express.json())
 server.use(express.static(path.join(__dirname, './public')))
-server.use(cors('*'))
 
-server.get('/words', (req, res) => {})
+server.use('/words', words)
 
 module.exports = server
