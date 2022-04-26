@@ -6,7 +6,6 @@ const GuessForm = () => {
   const [guess, setGuess] = useState([])
 
   const handleChange = (e) => {
-    console.log(guess.length);
     const guessLetter = {
       letter: e.target.value.charAt(e.target.value.length -1),
       id: guess.length,
@@ -14,9 +13,25 @@ const GuessForm = () => {
       isYellow: false,
       isGreen: false,
     }
+    if (e.target.value.length < guess.length) {
+      guess.pop()
+    }
+    if (guess.length === 5) {
+      console.log('too long') //todo add error state
+      console.log(guess);
+    } 
+    else {
     setGuess([...guess,guessLetter]);
     console.log(guess);
+    }
+  }
+  
 
+  const handleButtonClick = (e) => { //
+    const parentId = e.target.parentElement.id
+    console.log(e.target);
+
+    console.log('clicked')
   }
 
   return (
@@ -32,14 +47,8 @@ const GuessForm = () => {
         </form>
       </div>
       <Container>
-        <GuessFormRow guess={guess}/>
+        <GuessFormRow guess={guess} button={handleButtonClick}/>
       </Container>
-        {/* <GuessFormRow />
-        <GuessFormRow />
-        <GuessFormRow />
-        <GuessFormRow />
-        <GuessFormRow />
-      </Container> */}
     </div>
   )
 }

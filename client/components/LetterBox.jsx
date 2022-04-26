@@ -5,7 +5,7 @@ const LetterBox = ({ letter }) => {
     <>
       <Card>
         <CardContent>
-          <Typography variant="h4">hi</Typography>
+          <Typography variant="h4">{letter.letter}</Typography>
         </CardContent>
       </Card>
     </>
