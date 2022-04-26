@@ -16,7 +16,8 @@ const WordsList = () => {
   },[])
 
   return (
-    <div>
+    <div className="words-list-container">
+    <h2>Words:</h2>
       <Container>
       <Grid container>
       {dictionary.map((word, i) => {
@@ -24,12 +25,6 @@ const WordsList = () => {
             <Paper className="paper" elevation={6}>{word.word}</Paper>
           </Grid>)
       })}
-          <Grid item md={1}>
-            <Paper>Elate</Paper>
-          </Grid>
-          <Grid item>
-            <Paper>Brave</Paper>
-          </Grid>
         </Grid>
       </Container>
     </div>

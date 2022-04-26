@@ -5,9 +5,10 @@ const initailWordList = []
 function wordReducer(currentState = initailWordList, action) {
   switch (action.type) {
     case ADD_FULL_WORDLIST:
-      return [...initailWordList, action.wordList]
-    case RETURN_REMAINING_WORDLIST:
-      return [action.wordList]
+      return [...currentState, 1 + 1]
+
+    default:
+      return [...currentState]
   }
 }
 

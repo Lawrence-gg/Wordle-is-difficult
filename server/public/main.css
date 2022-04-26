@@ -8,6 +8,16 @@ body {
   overflow: hidden;
 }
 
+
+
+.words-list-container {
+  margin-top: 10rem;
+}
+
 .paper {
   margin: 2px;
+}
+
+.gridItem {
+  margin: 10px;
 }

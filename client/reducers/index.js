@@ -1,5 +1,6 @@
 import { combineReducers } from 'redux'
+import wordReducer from './wordReducers'
 
 export default combineReducers({
-  wordReducers,
+  wordReducer,
 })

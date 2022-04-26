@@ -1,16 +1,14 @@
 import React from 'react'
-import { Card, TextField, CardContent } from '@material-ui/core'
+import { Card, TextField, CardContent, Typography } from '@material-ui/core'
 const LetterBox = () => {
   return (
     <>
       <Card>
         <CardContent>
-          <TextField
-            id="standard-basic"
-            label=""
-            variant="standard"
-            margin="normal"
-          />
+          <Typography variant="h4"></Typography>
+          <button>Gray</button>
+          <button>Yellow</button>
+          <button>Green</button>
         </CardContent>
       </Card>
     </>

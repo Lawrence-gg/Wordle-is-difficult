@@ -1,28 +1,16 @@
 import React from 'react'
-import { Container, Grid, Card, TextField } from '@material-ui/core'
-import CardContent from '@mui/material/CardContent'
-import LetterBox from './LetterBox'
+import { Container } from '@material-ui/core'
+import GuessFormRow from './GuessFormRow'
 const GuessForm = () => {
   return (
     <div>
       <Container>
-        <Grid container>
-          <Grid item sm={1} md={1}>
-            <LetterBox />
-          </Grid>
-          <Grid item sm={1} md={1}>
-            <LetterBox />
-          </Grid>
-          <Grid item sm={1} md={1}>
-            <LetterBox />
-          </Grid>
-          <Grid item sm={1} md={1}>
-            <LetterBox />
-          </Grid>
-          <Grid item sm={1} md={1}>
-            <LetterBox />
-          </Grid>
-        </Grid>
+        <GuessFormRow />
+        <GuessFormRow />
+        <GuessFormRow />
+        <GuessFormRow />
+        <GuessFormRow />
+        <GuessFormRow />
       </Container>
     </div>
   )
