@@ -1,5 +1,5 @@
 export const ADD_FULL_WORDLIST = 'ADD_FULL_WORDLIST'
-export const RETURN_REMAINING_WORDS = 'RETURN_REAMINING_WORDS'
+export const RETURN_REMAINING_WORDS = 'RETURN_REMAINING_WORDS'
 
 export const FULL_WORDLIST = (wordList) => {
   return {
