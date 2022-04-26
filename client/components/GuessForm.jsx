@@ -15,8 +15,9 @@ const GuessForm = () => {
     }
     if (e.target.value.length < guess.length) {
       guess.pop()
+      console.log(guess)
     }
-    if (guess.length === 5) {
+    else if (guess.length === 5) {
       console.log('too long') //todo add error state
       console.log(guess);
     } 
