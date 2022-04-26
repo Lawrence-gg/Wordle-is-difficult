@@ -21,3 +21,11 @@ body {
 .gridItem {
   margin: 10px;
 }
+
+.letterBox-div {
+  display: flex;
+}
+
+.letterBox-div button {
+  height: 12px;
+}
