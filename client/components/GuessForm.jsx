@@ -23,15 +23,35 @@ const GuessForm = () => {
     setGuess([...guess,guessLetter]);
     }
   }
-  
 
   const handleButtonClick = (e) => { //
     const parentId = e.target.parentElement.id
-    console.log(parentId)
-    console.log(e.target);
-    console.log('clicked')
+    const color = e.target.className
+    updateLetterColor(parentId, color)
   }
 
+  const updateLetterColor = (id, color) => {
+    console.log('updateletter')
+    if (color === 'gray') {
+       guess[id].isGray = true
+       guess[id].isYellow = false
+       guess[id].isGreen = false
+       document.querySelector(`.card${id}`).classList.add('card-gray')
+    }
+    else if (color === 'yellow') {
+      guess[id].isGray = false
+       guess[id].isYellow = true
+       guess[id].isGreen = false
+       document.querySelector(`.card${id}`).classList.add('card-yellow')
+    }
+    else {
+       guess[id].isGray = false
+       guess[id].isYellow = false
+       guess[id].isGreen = true
+       document.querySelector(`.card${id}`).classList.add('card-green')
+  }
+}
+  
   return (
     <div>
       <div className="form-wrapper">
@@ -50,5 +70,6 @@ const GuessForm = () => {
     </div>
   )
 }
+
 
 export default GuessForm

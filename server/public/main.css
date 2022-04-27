@@ -45,3 +45,23 @@ body {
   background-color: green;
   width: 33%;
 }
+
+.card {
+  color: white;
+}
+
+.card-gray{
+  background-color: gray;
+  color:white;
+
+}
+
+.card-yellow {
+  background-color: yellow;
+  color: white;
+}
+
+.card-green {
+  background-color: green;
+  color: white;
+}
