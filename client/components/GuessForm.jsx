@@ -15,23 +15,20 @@ const GuessForm = () => {
     }
     if (e.target.value.length < guess.length) {
       guess.pop()
-      console.log(guess)
     }
     else if (guess.length === 5) {
       console.log('too long') //todo add error state
-      console.log(guess);
     } 
     else {
     setGuess([...guess,guessLetter]);
-    console.log(guess);
     }
   }
   
 
   const handleButtonClick = (e) => { //
     const parentId = e.target.parentElement.id
+    console.log(parentId)
     console.log(e.target);
-
     console.log('clicked')
   }
 

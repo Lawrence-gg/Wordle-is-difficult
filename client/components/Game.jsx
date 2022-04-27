@@ -7,7 +7,6 @@ const Game = () => {
 
   return (
   <div className="game">
-  <Typography variant="h4" align="center">Sample word: Slice</Typography>
   <GuessForm />
   <WordsList />
   </div>
