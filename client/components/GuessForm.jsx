@@ -1,7 +1,8 @@
 import React from 'react'
-import { Container, TextField } from '@material-ui/core'
+import { Container, TextField, Box, Button } from '@material-ui/core'
 import GuessFormRow from './GuessFormRow'
 import { useState } from 'react'
+import { convertToArray, convertToString, wordifyGuess } from '../utils/utils'
 const GuessForm = () => {
   const [guess, setGuess] = useState([])
 
@@ -29,6 +30,21 @@ const GuessForm = () => {
     const color = e.target.className
     updateLetterColor(parentId, color)
   }
+  
+  const testButtonClick = () => {
+    convertToArray()
+    convertToString()
+    wordifyGuess();
+  }
+
+  const handleSubmit = () => {
+    console.log('clicked');
+    console.log(guess);
+
+    //todo dispatch action to global state : OBJ for sql 
+    //todo: take word from the list ()
+    //todo dispatch action to global state: POST
+  }
 
   const updateLetterColor = (id, color) => {
     console.log('updateletter')
@@ -51,17 +67,22 @@ const GuessForm = () => {
        document.querySelector(`.card${id}`).classList.add('card-green')
   }
 }
+
+const [testing, setTesting] = useState(true);
   
   return (
     <div>
+    
       <div className="form-wrapper">
-        <form >
+      {testing ? <Button onClick={testButtonClick}>Hello</Button> : <></> }
+        <form>
           <TextField 
           variant="outlined" 
           variantsize="medium" 
           label="word" 
           id="fullWidth"
            onChange={handleChange}/>
+           <Button onClick={handleSubmit} variant="outlined">Submit</Button>
         </form>
       </div>
       <Container>
