@@ -31,15 +31,18 @@ const GuessForm = () => {
     updateLetterColor(parentId, color)
   }
   
-  const testButtonClick = () => {
-    convertToArray()
-    convertToString()
-    wordifyGuess();
-  }
+  // const testButtonClick = () => {
+  //   // const array = convertToArray(guess)
+  //   // console.log(array);
+  //   // const string = convertToString(array)
+  //   // console.log(string);
+  //   const wordified = wordifyGuess(guess);
+  //   console.log(wordified);
+  // }
 
   const handleSubmit = () => {
-    console.log('clicked');
-    console.log(guess);
+    const wordified = wordifyGuess(guess);
+    console.log(wordified);
 
     //todo dispatch action to global state : OBJ for sql 
     //todo: take word from the list ()
@@ -68,7 +71,7 @@ const GuessForm = () => {
   }
 }
 
-const [testing, setTesting] = useState(true);
+const [testing, setTesting] = useState(false);
   
   return (
     <div>

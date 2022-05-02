@@ -1,13 +1,16 @@
 convertToArray = (obj) => {
-  console.log('convert to array')
+  const arr = []
+  obj.forEach((o) => arr.push(o.letter))
+  return arr
 }
 
 convertToString = (arr) => {
-  console.log('convert to string')
+  return arr.join('')
 }
 
 wordifyGuess = (guessObject) => {
-  console.log('wordify guess')
+  const array = convertToArray(guessObject)
+  return convertToString(array)
 }
 
 module.exports = {
