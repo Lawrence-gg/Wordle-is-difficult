@@ -1,12 +1,14 @@
 import React, { useState,useEffect } from 'react'
 import { Grid, Paper, Container, MuiThemeProvider } from '@material-ui/core'
-import { getTestWords } from '../api/wordApi'
+import { getTestWords, searchRemainingWords } from '../api/wordApi'
 
 const WordsList = () => {
   const [dictionary, setDictionary] = useState([])
 
   const handleClick = () => {
-    console.log(dictionary)
+    searchRemainingWords().then((word) => {
+      console.log(word);
+    })
   }
   
   useEffect(() => {
@@ -18,6 +20,7 @@ const WordsList = () => {
   return (
     <div className="words-list-container">
     <h2>Words:</h2>
+    <button onClick={handleClick}>Click me</button>
       <Container>
       <Grid container>
       {dictionary.map((word, i) => {

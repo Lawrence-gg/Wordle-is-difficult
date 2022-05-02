@@ -31,22 +31,10 @@ const GuessForm = () => {
     updateLetterColor(parentId, color)
   }
   
-  // const testButtonClick = () => {
-  //   // const array = convertToArray(guess)
-  //   // console.log(array);
-  //   // const string = convertToString(array)
-  //   // console.log(string);
-  //   const wordified = wordifyGuess(guess);
-  //   console.log(wordified);
-  // }
-
   const handleSubmit = () => {
     const wordified = wordifyGuess(guess);
     console.log(wordified);
-
-    //todo dispatch action to global state : OBJ for sql 
-    //todo: take word from the list ()
-    //todo dispatch action to global state: POST
+    
   }
 
   const updateLetterColor = (id, color) => {

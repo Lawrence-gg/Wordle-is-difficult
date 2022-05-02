@@ -1,10 +1,11 @@
 const express = require('express')
 const router = express.Router()
-
+const { post } = require('superagent')
 const db = require('../db')
-//words
+
+//history
 router.get('/', (req, res) => {
-  db.getWords()
+  db.getHistory()
     .then((response) => {
       res.json(response)
     })
@@ -13,11 +14,11 @@ router.get('/', (req, res) => {
     })
 })
 
-router.get('/remaining', (req, res) => {
-  db.searchWords()
-    .then((response) => {
-      res.json(response)
-    })
+router.post('/', (req, res) => {
+  const guess = req.body
+  console
+    .log(guess)
+    .then((something) => {})
     .catch((err) => {
       res.status(500).send(err.message)
     })
