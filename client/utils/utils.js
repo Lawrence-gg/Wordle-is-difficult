@@ -13,8 +13,19 @@ wordifyGuess = (guessObject) => {
   return convertToString(array)
 }
 
+searchifyGuess = (guessObject) => {
+  const searchArr = []
+  guessObject.forEach((o) => {
+    console.log(o)
+    const gray = ''
+    const yellow = ''
+    const green = ''
+  })
+}
+
 module.exports = {
   convertToArray,
   convertToString,
   wordifyGuess,
+  searchifyGuess,
 }

@@ -48,6 +48,7 @@ body {
 
 .card {
   color: white;
+  border: 2px solid black;
 }
 
 .card-gray{
@@ -58,7 +59,7 @@ body {
 
 .card-yellow {
   background-color: yellow;
-  color: white;
+  color: black;
 }
 
 .card-green {
