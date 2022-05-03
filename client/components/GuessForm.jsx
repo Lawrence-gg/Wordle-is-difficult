@@ -5,11 +5,12 @@ import GuessFormRow from './GuessFormRow'
 import { useSelector, useDispatch } from 'react-redux'
 
 import { convertToArray, convertToString, wordifyGuess } from '../utils/utils'
+import { postGuess } from '../api/wordApi'
 const GuessForm = () => {
   const dispatch = useDispatch()
   //useSelector goes here
   const [guess, setGuess] = useState([])
-  const [testing, setTesting] = useState(true)
+  const [testing, setTesting] = useState(false)
 
   const handleChange = (e) => {
     const guessLetter = {
@@ -37,7 +38,11 @@ const GuessForm = () => {
 
   const handleSubmit = () => {
     const wordified = wordifyGuess(guess)
-    console.log(wordified)
+    console.log({ word: wordified })
+    wordified.length === 5
+      ? postGuess({ wordified })
+      : alert('Incorrect format. Guesses should be 5 characters long')
+    console.log('submit button clicked')
   }
 
   const updateLetterColor = (id, color) => {

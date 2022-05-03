@@ -15,7 +15,7 @@ function searchWords(wordObj, db = connection) {
 }
 
 function addHistory(word, date, db = connection) {
-  return db('history').insert(word, date)
+  return db('history').insert({ guess_word: word, date: date })
 }
 
 function getHistory(db = connection) {

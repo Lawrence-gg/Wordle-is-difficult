@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
-const { post } = require('superagent')
 const db = require('../db')
+const { post } = require('superagent')
 
 //'api/history'
 router.get('/', (req, res) => {
@@ -15,10 +15,14 @@ router.get('/', (req, res) => {
 })
 
 router.post('/', (req, res) => {
-  const guess = req.body
-  console
-    .log(guess)
-    .then((something) => {})
+  const data = JSON.stringify(req.body.wordified)
+  const date = new Date().toLocaleString().replace(',', '')
+  console.log(data)
+  console.log(date)
+  db.addHistory(data, date)
+    .then((res) => {
+      return res.status
+    })
     .catch((err) => {
       res.status(500).send(err.message)
     })
