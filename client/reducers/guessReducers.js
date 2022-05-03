@@ -5,7 +5,7 @@ const initialGuesses = []
 function guessReducer(currentState = initialGuesses, action) {
   switch (action.type) {
     case GET_FULL_HISTORY:
-      return [...currentState, action.guesses]
+      return action.guesses
 
     default:
       return [...currentState]

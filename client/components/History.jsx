@@ -10,11 +10,15 @@ import {
 } from '@mui/material'
 import { Box, Tab } from '@material-ui/core'
 
-import { useSelector, useDispath } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
+import { recieveHistory, requestHistory, fetchHistory } from '../actions'
 
 const History = () => {
+  const dispatch = useDispatch();
 
   const handleClick = () => {
+    console.log('clicked');
+    dispatch(fetchHistory());
   }
   return (
     <div>

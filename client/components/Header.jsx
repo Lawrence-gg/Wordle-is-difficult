@@ -10,20 +10,20 @@ const Header = () => {
         <Link to="/">
           <Box sx={{ m: 1 }}>
             <Typography variant="h6" color="primary" gutterBottom>
-              <a href="">Home</a>{' '}
+              Home
             </Typography>
           </Box>
         </Link>
         <Link to="/History">
           <Box sx={{ m: 1 }}>
             <Typography variant="h6" color="primary" gutterBottom>
-              <a href="">History</a>{' '}
+              History
             </Typography>
           </Box>
         </Link>
         <Box sx={{ m: 1 }}>
           <Typography variant="h6" color="primary" gutterBottom>
-            <a href="">Help</a>{' '}
+            Help
           </Typography>
         </Box>
       </Box>
