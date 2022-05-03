@@ -17,17 +17,11 @@ const History = () => {
   const dispatch = useDispatch()
   const history = useSelector((state) => state.guessReducer)
 
-  const handleClick = () => {
-    console.log('clicked')
+  const handleClick = () => {}
+
+  useEffect(() => {
     dispatch(fetchHistory())
-    console.log(history)
-  }
-  {
-    /*  */
-  }
-  {
-    /*  */
-  }
+  }, [])
 
   return (
     <div>
