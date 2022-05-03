@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 
 const db = require('../db')
-//words
+///words
 router.get('/', (req, res) => {
   db.getWords()
     .then((response) => {

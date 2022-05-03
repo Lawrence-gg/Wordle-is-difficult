@@ -1,10 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Container, TextField, Box, Button } from '@material-ui/core'
 import GuessFormRow from './GuessFormRow'
-import { useState } from 'react'
+
+import { useSelector, useDispatch } from 'react-redux'
+
 import { convertToArray, convertToString, wordifyGuess } from '../utils/utils'
 const GuessForm = () => {
+  const dispatch = useDispatch()
+  //useSelector goes here
   const [guess, setGuess] = useState([])
+  const [testing, setTesting] = useState(true)
 
   const handleChange = (e) => {
     const guessLetter = {
@@ -59,8 +64,6 @@ const GuessForm = () => {
     console.log('test clicked')
     searchifyGuess(guess)
   }
-
-  const [testing, setTesting] = useState(true)
 
   return (
     <div>

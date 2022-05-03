@@ -66,3 +66,7 @@ body {
   background-color: green;
   color: white;
 }
+
+.table-container {
+  width: 60vw;
+}

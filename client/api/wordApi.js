@@ -1,7 +1,7 @@
 import request from 'superagent'
 
-const words = '/words'
-const remaining = '/words/remaining'
+const words = '/api/words'
+// const remaining = '/words/remaining'
 
 export function getTestWords() {
   return request.get(words).then((response) => {

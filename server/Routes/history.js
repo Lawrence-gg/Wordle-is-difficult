@@ -3,7 +3,7 @@ const router = express.Router()
 const { post } = require('superagent')
 const db = require('../db')
 
-//history
+//'api/history'
 router.get('/', (req, res) => {
   db.getHistory()
     .then((response) => {
