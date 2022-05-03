@@ -19,7 +19,7 @@ function addHistory(word, date, db = connection) {
 }
 
 function getHistory(db = connection) {
-  return db('history').select().orderBy('date', 'desc')
+  return db('history').select().orderBy('id', 'desc')
 }
 
 module.exports = {
