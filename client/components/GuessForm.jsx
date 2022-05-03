@@ -2,13 +2,12 @@ import React, { useState } from 'react'
 import { Container, TextField, Box, Button } from '@material-ui/core'
 import GuessFormRow from './GuessFormRow'
 
-import { useSelector, useDispatch } from 'react-redux'
+import { useDispatch } from 'react-redux'
 
-import { convertToArray, convertToString, wordifyGuess } from '../utils/utils'
+import { wordifyGuess } from '../utils/utils'
 import { postGuess } from '../api/wordApi'
 const GuessForm = () => {
   const dispatch = useDispatch()
-  //useSelector goes here
   const [guess, setGuess] = useState([])
   const [testing, setTesting] = useState(false)
 
@@ -30,7 +29,6 @@ const GuessForm = () => {
   }
 
   const handleButtonClick = (e) => {
-    //
     const parentId = e.target.parentElement.id
     const color = e.target.className
     updateLetterColor(parentId, color)
@@ -38,11 +36,9 @@ const GuessForm = () => {
 
   const handleSubmit = () => {
     const wordified = wordifyGuess(guess)
-    console.log({ word: wordified })
     wordified.length === 5
       ? postGuess({ wordified })
       : alert('Incorrect format. Guesses should be 5 characters long')
-    console.log('submit button clicked')
   }
 
   const updateLetterColor = (id, color) => {

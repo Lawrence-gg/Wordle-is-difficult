@@ -22,11 +22,17 @@ const History = () => {
     dispatch(fetchHistory())
     console.log(history)
   }
+  {
+    /*  */
+  }
+  {
+    /*  */
+  }
+
   return (
     <div>
       <h1>History</h1>
       <button onClick={handleClick}>Click me</button>
-
       <TableContainer>
         <Box sx={{ width: '60%', margin: '0 auto' }}>
           <Table aria-label="simple table">
@@ -37,6 +43,15 @@ const History = () => {
                 <TableCell align="right">Date</TableCell>
               </TableRow>
             </TableHead>
+            <TableBody>
+              {history.map((row) => (
+                <TableRow key={row.id}>
+                  <TableCell>{row.guess_word}</TableCell>
+                  <TableCell align="right">{row.id}</TableCell>
+                  <TableCell align="right">{row.date}</TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
           </Table>
         </Box>
       </TableContainer>
