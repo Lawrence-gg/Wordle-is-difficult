@@ -15,10 +15,12 @@ import { recieveHistory, requestHistory, fetchHistory } from '../actions'
 
 const History = () => {
   const dispatch = useDispatch();
+  const history = useSelector(state => state.initialGuesses)
 
   const handleClick = () => {
     console.log('clicked');
     dispatch(fetchHistory());
+    console.log(history);
   }
   return (
     <div>

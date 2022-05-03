@@ -42,7 +42,6 @@ export function fetchHistory() {
     return request
       .get('/api/history')
       .then((res) => {
-        console.log(res)
         dispatch(recieveHistory(res.body))
         return null
       })
