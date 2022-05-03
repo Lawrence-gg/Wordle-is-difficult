@@ -14,13 +14,13 @@ import { useSelector, useDispatch } from 'react-redux'
 import { recieveHistory, requestHistory, fetchHistory } from '../actions'
 
 const History = () => {
-  const dispatch = useDispatch();
-  const history = useSelector(state => state.initialGuesses)
+  const dispatch = useDispatch()
+  const history = useSelector((state) => state.guessReducer)
 
   const handleClick = () => {
-    console.log('clicked');
-    dispatch(fetchHistory());
-    console.log(history);
+    console.log('clicked')
+    dispatch(fetchHistory())
+    console.log(history)
   }
   return (
     <div>

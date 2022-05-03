@@ -7,6 +7,7 @@ const { post } = require('superagent')
 router.get('/', (req, res) => {
   db.getHistory()
     .then((response) => {
+      console.log(response)
       res.json(response)
     })
     .catch((err) => {
@@ -20,9 +21,7 @@ router.post('/', (req, res) => {
   console.log(data)
   console.log(date)
   db.addHistory(data, date)
-    .then((res) => {
-      return res.status
-    })
+    .then((res) => {})
     .catch((err) => {
       res.status(500).send(err.message)
     })
